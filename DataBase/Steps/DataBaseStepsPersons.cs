@@ -7,7 +7,14 @@ namespace DataBase
     [Binding]
     public class DataBaseStepsPersons
     {
-        private readonly SqlConnectorHelper _sqlHelper = (SqlConnectorHelper)ScenarioContext.Current["SqlHelper"];
+        private readonly SqlConnectorHelper _sqlHelper;
+        private readonly ScenarioContext _scenarioContext;
+
+        public DataBaseStepsPersons(ScenarioContext scenarioContext)
+        {
+            _scenarioContext = scenarioContext;
+            _sqlHelper = _scenarioContext.Get<SqlConnectorHelper>("SqlHelper");
+        }
 
         [When(@"I create row in table ""(.*)"" with data")]
         public void WhenICreateRowInTableWithData(string tableName, Table table)
@@ -22,13 +29,13 @@ namespace DataBase
         {
             string query = "SELECT * FROM Persons";
             DataTable responseTable = _sqlHelper.MakeQuery(query);
-            ScenarioContext.Current["PersonsTable"] = responseTable;
+            _scenarioContext["PersonsTable"] = responseTable;
         }
 
         [Then(@"Table contains data")]
         public void ThenTableContainsData(Table table)
         {
-            DataTable responseTable = (DataTable)ScenarioContext.Current["PersonsTable"];
+            DataTable responseTable = (DataTable)_scenarioContext["PersonsTable"];
             int numOfRows = responseTable.Rows.Count;
             string lastName = responseTable.Rows[numOfRows - 1]["FirstName"].ToString();
             Assert.AreEqual(lastName, table.Rows[0]["FirstName"]);
