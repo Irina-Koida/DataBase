@@ -22,7 +22,7 @@ Scenario Outline:  It is possible to insert data to Airport DB
 		| Albus   | Doumbledore | 78  | Lisburn    |
 
 
-		
-@InsertData
-Scenario Outline:  It is possible to insert data to Airport DB
-	When I create row in table "Persons" with data
+#		
+#@InsertData
+#Scenario Outline:  It is possible to insert data to Airport DB
+#	When I create row in table "Persons" with data

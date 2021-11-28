@@ -20,22 +20,22 @@ namespace DataBase
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("OrdersTable")]
-    public partial class OrdersTableFeature
+    [NUnit.Framework.DescriptionAttribute("PersonsTable")]
+    public partial class PersonsTableFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "OrdersTable.feature"
+#line 1 "PersonsTable.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "OrdersTable", "    As a user\r\n    I want to work with DB data from selected table\r\n    In order " +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PersonsTable", "    As a user\r\n    I want to work with DB data from selected table\r\n    In order " +
                     "to select the data with way I need", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -77,8 +77,8 @@ namespace DataBase
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("It is possible to select data to Airport DB")]
         [NUnit.Framework.CategoryAttribute("SelectData")]
-        [NUnit.Framework.TestCaseAttribute("Albus", null)]
-        public virtual void ItIsPossibleToSelectDataToAirportDB(string buyer, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Birmingham", null)]
+        public virtual void ItIsPossibleToSelectDataToAirportDB(string sity, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SelectData"};
@@ -88,7 +88,7 @@ namespace DataBase
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("buyer", buyer);
+            argumentsOfScenario.Add("sity", sity);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.When("I select Buyer from \"Orders\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select Sity from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Buyer"});
-                table1.AddRow(new string[] {
-                            string.Format("{0}", buyer)});
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Sity"});
+                table5.AddRow(new string[] {
+                            string.Format("{0}", sity)});
 #line 9
- testRunner.Then("Table contains buyer data", ((string)(null)), table1, "Then ");
+ testRunner.Then("Table contains sity data", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
