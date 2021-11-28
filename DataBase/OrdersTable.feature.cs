@@ -75,10 +75,10 @@ namespace DataBase
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is possible to select data to Airport DB")]
+        [NUnit.Framework.DescriptionAttribute("It is possible to select Buyer data to Airport DB")]
         [NUnit.Framework.CategoryAttribute("SelectData")]
         [NUnit.Framework.TestCaseAttribute("Albus", null)]
-        public virtual void ItIsPossibleToSelectDataToAirportDB(string buyer, string[] exampleTags)
+        public virtual void ItIsPossibleToSelectBuyerDataToAirportDB(string buyer, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SelectData"};
@@ -89,7 +89,7 @@ namespace DataBase
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("buyer", buyer);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select Buyer data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -119,6 +119,58 @@ this.ScenarioInitialize(scenarioInfo);
                             string.Format("{0}", buyer)});
 #line 9
  testRunner.Then("Table contains buyer data", ((string)(null)), table1, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("It is possible to select Delivery data between Amount 400 and 890 from Airport DB" +
+            "")]
+        [NUnit.Framework.CategoryAttribute("SelectData")]
+        [NUnit.Framework.TestCaseAttribute("Ship", null)]
+        public virtual void ItIsPossibleToSelectDeliveryDataBetweenAmount400And890FromAirportDB(string delivery, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "SelectData"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("delivery", delivery);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select Delivery data between Amount 400 and 890 from Airport DB" +
+                    "", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 18
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 19
+ testRunner.When("I select Delivery between Amount 400 and 890 in \"Orders\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Delivery"});
+                table6.AddRow(new string[] {
+                            string.Format("{0}", delivery)});
+#line 20
+ testRunner.Then("Table contains a delivery data", ((string)(null)), table6, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
