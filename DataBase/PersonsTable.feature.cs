@@ -20,23 +20,23 @@ namespace DataBase
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataBase")]
-    public partial class DataBaseFeature
+    [NUnit.Framework.DescriptionAttribute("PersonsTable")]
+    public partial class PersonsTableFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "DataBase.feature"
+#line 1 "PersonsTable.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "DataBase", "\tAs a user\r\n    I want to work with DB data\r\n    In order to operate the data the" +
-                    " way I need ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "PersonsTable", "    As a user\r\n    I want to work with DB data from selected table\r\n    In order " +
+                    "to select the data with way I need", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,28 +75,21 @@ namespace DataBase
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is possible to insert data to Airport DB")]
-        [NUnit.Framework.CategoryAttribute("InsertData")]
-        [NUnit.Framework.TestCaseAttribute("Lucius", "Malfoy", "35", "Aberdeen", null)]
-        [NUnit.Framework.TestCaseAttribute("Tom", "Riddle", "50", "Armagh", null)]
-        [NUnit.Framework.TestCaseAttribute("Lily", "Evans", "35", "Bristol", null)]
-        [NUnit.Framework.TestCaseAttribute("Severus", "Snape", "35", "Birmingham", null)]
-        [NUnit.Framework.TestCaseAttribute("Albus", "Doumbledore", "78", "Lisburn", null)]
-        public virtual void ItIsPossibleToInsertDataToAirportDB(string name, string family, string age, string city, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("It is possible to select data to Airport DB")]
+        [NUnit.Framework.CategoryAttribute("SelectData")]
+        [NUnit.Framework.TestCaseAttribute("Birmingham", null)]
+        public virtual void ItIsPossibleToSelectDataToAirportDB(string sity, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "InsertData"};
+                    "SelectData"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("name", name);
-            argumentsOfScenario.Add("family", family);
-            argumentsOfScenario.Add("age", age);
-            argumentsOfScenario.Add("city", city);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to insert data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            argumentsOfScenario.Add("sity", sity);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -117,34 +110,15 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "Age",
-                            "City"});
-                table1.AddRow(new string[] {
-                            string.Format("{0}", name),
-                            string.Format("{0}", family),
-                            string.Format("{0}", age),
-                            string.Format("{0}", city)});
 #line 8
- testRunner.When("I create row in table \"Persons\" with data", ((string)(null)), table1, "When ");
+ testRunner.When("I select Sity from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
- testRunner.When("I select whole \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "FirstName",
-                            "LastName",
-                            "Age",
-                            "City"});
-                table2.AddRow(new string[] {
-                            string.Format("{0}", name),
-                            string.Format("{0}", family),
-                            string.Format("{0}", age),
-                            string.Format("{0}", city)});
-#line 12
- testRunner.Then("Table contains data", ((string)(null)), table2, "Then ");
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Sity"});
+                table6.AddRow(new string[] {
+                            string.Format("{0}", sity)});
+#line 9
+ testRunner.Then("Table contains sity data", ((string)(null)), table6, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

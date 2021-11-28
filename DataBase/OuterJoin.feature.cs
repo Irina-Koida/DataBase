@@ -20,23 +20,23 @@ namespace DataBase
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("DataBase")]
-    public partial class DataBaseFeature
+    [NUnit.Framework.DescriptionAttribute("OuterJoin")]
+    public partial class OuterJoinFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "DataBase.feature"
+#line 1 "OuterJoin.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "DataBase", "\tAs a user\r\n    I want to work with DB data\r\n    In order to operate the data the" +
-                    " way I need ", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "", "OuterJoin", "\tAs a user\r\n      I want to work with DB data from a selected table\r\n      In ord" +
+                    "er to join the data with the way I need", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,29 +75,31 @@ namespace DataBase
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("It is possible to insert data to Airport DB")]
-        [NUnit.Framework.CategoryAttribute("InsertData")]
-        [NUnit.Framework.TestCaseAttribute("Lucius", "Malfoy", "35", "Aberdeen", null)]
-        [NUnit.Framework.TestCaseAttribute("Tom", "Riddle", "50", "Armagh", null)]
-        [NUnit.Framework.TestCaseAttribute("Lily", "Evans", "35", "Bristol", null)]
-        [NUnit.Framework.TestCaseAttribute("Severus", "Snape", "35", "Birmingham", null)]
-        [NUnit.Framework.TestCaseAttribute("Albus", "Doumbledore", "78", "Lisburn", null)]
-        public virtual void ItIsPossibleToInsertDataToAirportDB(string name, string family, string age, string city, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("ability to contain all rows from both tables in DB Airport")]
+        [NUnit.Framework.CategoryAttribute("OuterJoinData")]
+        [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "21", "Cena", "234,00", "Pigeon", null)]
+        [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "22", "Dwane", "345,00", "Auto", null)]
+        [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "23", "Paulo", "456,00", "Ship", null)]
+        [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "24", "Enrique", "567,00", "Car", null)]
+        [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "25", "Justin", "678,00", "Airplane", null)]
+        public virtual void AbilityToContainAllRowsFromBothTablesInDBAirport(string name, string family, string age, string buyer, string amount, string delivery, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "InsertData"};
+                    "OuterJoinData"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("name", name);
-            argumentsOfScenario.Add("family", family);
-            argumentsOfScenario.Add("age", age);
-            argumentsOfScenario.Add("city", city);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to insert data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 7
+            argumentsOfScenario.Add("<name>", name);
+            argumentsOfScenario.Add("<family>", family);
+            argumentsOfScenario.Add("<age>", age);
+            argumentsOfScenario.Add("<buyer>", buyer);
+            argumentsOfScenario.Add("<amount>", amount);
+            argumentsOfScenario.Add("<delivery>", delivery);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ability to contain all rows from both tables in DB Airport", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -117,34 +119,50 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+#line 9
+testRunner.When("I create a row in the Persons table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
-                            "Age",
-                            "City"});
-                table1.AddRow(new string[] {
-                            string.Format("{0}", name),
-                            string.Format("{0}", family),
-                            string.Format("{0}", age),
-                            string.Format("{0}", city)});
-#line 8
- testRunner.When("I create row in table \"Persons\" with data", ((string)(null)), table1, "When ");
-#line hidden
+                            "Age"});
+                table3.AddRow(new string[] {
+                            "<name>",
+                            "<family>",
+                            "<age>"});
 #line 11
- testRunner.When("I select whole \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+   testRunner.When("I create row in table \"Persons\" with data", ((string)(null)), table3, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+#line 14
+ testRunner.When("I create a row in the Orders table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Buyer",
+                            "Amount",
+                            "Delivery"});
+                table4.AddRow(new string[] {
+                            "<buyer>",
+                            "<amount>",
+                            "<delivery>"});
+#line 16
+   testRunner.When("I create row in table \"Orders\" with data", ((string)(null)), table4, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
-                            "City"});
-                table2.AddRow(new string[] {
-                            string.Format("{0}", name),
-                            string.Format("{0}", family),
-                            string.Format("{0}", age),
-                            string.Format("{0}", city)});
-#line 12
- testRunner.Then("Table contains data", ((string)(null)), table2, "Then ");
+                            "Buyer",
+                            "Amount",
+                            "Delivery"});
+                table5.AddRow(new string[] {
+                            "<name>",
+                            "<family>",
+                            "<age>",
+                            "<buyer>",
+                            "<amount>",
+                            "<delivery>"});
+#line 19
+  testRunner.Then("Table contains data", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
