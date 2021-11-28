@@ -75,7 +75,7 @@ namespace DataBase
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("ability to contain all rows from both tables in DB Airport")]
+        [NUnit.Framework.DescriptionAttribute("Ability to contain all rows from both tables in DB Airport")]
         [NUnit.Framework.CategoryAttribute("OuterJoinData")]
         [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "21", "Cena", "234,00", "Pigeon", null)]
         [NUnit.Framework.TestCaseAttribute("NULL", "NULL", "22", "Dwane", "345,00", "Auto", null)]
@@ -98,7 +98,7 @@ namespace DataBase
             argumentsOfScenario.Add("<buyer>", buyer);
             argumentsOfScenario.Add("<amount>", amount);
             argumentsOfScenario.Add("<delivery>", delivery);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("ability to contain all rows from both tables in DB Airport", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ability to contain all rows from both tables in DB Airport", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -120,41 +120,41 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 9
-testRunner.When("I create a row in the Persons table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("I select a  Persons table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "<name>",
                             "<family>",
                             "<age>"});
 #line 11
-   testRunner.When("I create row in table \"Persons\" with data", ((string)(null)), table2, "When ");
+   testRunner.When("I select row in table \"Persons\" with data", ((string)(null)), table3, "When ");
 #line hidden
 #line 14
- testRunner.When("I create a row in the Orders table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select a Orders table with some data", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Buyer",
                             "Amount",
                             "Delivery"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "<buyer>",
                             "<amount>",
                             "<delivery>"});
 #line 16
-   testRunner.When("I create row in table \"Orders\" with data", ((string)(null)), table3, "When ");
+   testRunner.When("I create row in table \"Orders\" with data", ((string)(null)), table4, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName",
                             "LastName",
                             "Age",
                             "Buyer",
                             "Amount",
                             "Delivery"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "<name>",
                             "<family>",
                             "<age>",
@@ -162,7 +162,7 @@ testRunner.When("I create a row in the Persons table with some data", ((string)(
                             "<amount>",
                             "<delivery>"});
 #line 19
-  testRunner.Then("Table contains data", ((string)(null)), table4, "Then ");
+  testRunner.Then("all the data will be combined into one table", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

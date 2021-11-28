@@ -77,8 +77,8 @@ namespace DataBase
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("It is possible to select data to Airport DB")]
         [NUnit.Framework.CategoryAttribute("SelectData")]
-        [NUnit.Framework.TestCaseAttribute("Birmingham", null)]
-        public virtual void ItIsPossibleToSelectDataToAirportDB(string sity, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Lisburn", null)]
+        public virtual void ItIsPossibleToSelectDataToAirportDB(string city, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SelectData"};
@@ -88,7 +88,7 @@ namespace DataBase
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("sity", sity);
+            argumentsOfScenario.Add("city", city);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select data to Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
@@ -111,14 +111,14 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 8
- testRunner.When("I select Sity from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I select to City from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Sity"});
-                table5.AddRow(new string[] {
-                            string.Format("{0}", sity)});
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "City"});
+                table6.AddRow(new string[] {
+                            string.Format("{0}", city)});
 #line 9
- testRunner.Then("Table contains sity data", ((string)(null)), table5, "Then ");
+ testRunner.Then("Table contains City data", ((string)(null)), table6, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
