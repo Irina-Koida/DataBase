@@ -4,7 +4,7 @@
     In order to select the data with way I need
 
 @SelectData
-Scenario: It is possible to select Buyer data to Airport DB
+Scenario Outline: It is possible to select Buyer data to Airport DB
 	When I select Buyer from "Orders" table
 	Then Table contains buyer data
 		| Buyer   |
@@ -15,7 +15,7 @@ Scenario: It is possible to select Buyer data to Airport DB
 		| Albus |
 
 @SelectData
-Scenario: It is possible to select Delivery data between Amount 400 and 890 from Airport DB
+Scenario Outline: It is possible to select Delivery data between Amount 400 and 890 from Airport DB
 	When I select Delivery between Amount 400 and 890 in "Orders" table
 	Then Table contains a delivery data
 		| Delivery   |
@@ -25,3 +25,13 @@ Scenario: It is possible to select Delivery data between Amount 400 and 890 from
 		| delivery |
 		| Ship     |
 
+@Select
+Scenario Outline: It is possible to select Amount, where Delivery located between car and ship from Airport DB
+	When I select Amount between Delivery car and ship in "Orders" table
+	Then Table contains amount data
+		| Amount   |
+		| <amount> |
+
+	Examples:
+		| amount    |
+		| 4567.0000 |
