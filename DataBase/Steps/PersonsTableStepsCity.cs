@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace DataBase.Steps
 {
     [Binding]
-    public class PersonsTableSteps
+    public class PersonsTableStepsCity
     {
         private readonly SqlConnectorHelper _sqlHelper = (SqlConnectorHelper)ScenarioContext.Current["SqlHelper"];
 
