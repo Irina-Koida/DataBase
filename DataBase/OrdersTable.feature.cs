@@ -113,12 +113,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I select Buyer from \"Orders\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Buyer"});
-                table1.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             string.Format("{0}", buyer)});
 #line 9
- testRunner.Then("Table contains buyer data", ((string)(null)), table1, "Then ");
+ testRunner.Then("Table contains buyer data", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -165,12 +165,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 19
  testRunner.When("I select Delivery between Amount 400 and 890 in \"Orders\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Delivery"});
-                table2.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             string.Format("{0}", delivery)});
 #line 20
- testRunner.Then("Table contains a delivery data", ((string)(null)), table2, "Then ");
+ testRunner.Then("Table contains a delivery data", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -217,12 +217,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 30
  testRunner.When("I select Amount between Delivery car and ship in \"Orders\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Amount"});
-                table3.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             string.Format("{0}", amount)});
 #line 31
- testRunner.Then("Table contains amount data", ((string)(null)), table3, "Then ");
+ testRunner.Then("Table contains amount data", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

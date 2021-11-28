@@ -113,12 +113,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I select to City from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "City"});
-                table6.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             string.Format("{0}", city)});
 #line 9
- testRunner.Then("Table contains City data", ((string)(null)), table6, "Then ");
+ testRunner.Then("Table contains city data", ((string)(null)), table9, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
