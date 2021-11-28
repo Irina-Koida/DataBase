@@ -7,9 +7,9 @@
 Scenario: It is possible to select data to Airport DB
 	When I select Sity from "Persons" table
 	Then Table contains sity data
-		| Sity   |
-		| <sity> |
+		| City   |
+		| <city> |
 
 	Examples:
-		| sity       |
-		| Birmingham |
+		| city       |
+		| Lisburn |
