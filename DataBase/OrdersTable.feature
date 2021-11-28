@@ -12,7 +12,7 @@ Scenario Outline: It is possible to select Buyer data to Airport DB
 
 	Examples:
 		| buyer |
-		| Albus |
+		| Albus |     
 
 @SelectData
 Scenario Outline: It is possible to select Delivery data between Amount 400 and 890 from Airport DB

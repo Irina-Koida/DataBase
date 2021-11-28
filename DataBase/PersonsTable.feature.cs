@@ -113,12 +113,166 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I select to City from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "City"});
-                table9.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             string.Format("{0}", city)});
 #line 9
- testRunner.Then("Table contains city data", ((string)(null)), table9, "Then ");
+ testRunner.Then("Table contains city data", ((string)(null)), table6, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("It is possible to select LastName data between ID_Persons 15 and 18 from Airport " +
+            "DB")]
+        [NUnit.Framework.CategoryAttribute("SelectData")]
+        [NUnit.Framework.TestCaseAttribute("Robin", null)]
+        public virtual void ItIsPossibleToSelectLastNameDataBetweenID_Persons15And18FromAirportDB(string lastname, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "SelectData"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("lastname", lastname);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select LastName data between ID_Persons 15 and 18 from Airport " +
+                    "DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 19
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 20
+ testRunner.When("I select LastName between ID_Persons 15 and 18 in \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "LastName"});
+                table7.AddRow(new string[] {
+                            string.Format("{0}", lastname)});
+#line 21
+ testRunner.Then("the table contains data on the selected delivery ID", ((string)(null)), table7, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("It is possible to select Age, where LastName located between Johnson and Tom from" +
+            " Airport DB")]
+        [NUnit.Framework.CategoryAttribute("Select")]
+        [NUnit.Framework.TestCaseAttribute("35", null)]
+        public virtual void ItIsPossibleToSelectAgeWhereLastNameLocatedBetweenJohnsonAndTomFromAirportDB(string age, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Select"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("age", age);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select Age, where LastName located between Johnson and Tom from" +
+                    " Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 30
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 31
+ testRunner.When("I select Age between LastName Johnson and Tom in \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Age"});
+                table8.AddRow(new string[] {
+                            string.Format("{0}", age)});
+#line 32
+ testRunner.Then("Table contains amount age", ((string)(null)), table8, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("It is possible to select FirstName, between age from the Airport DB")]
+        [NUnit.Framework.CategoryAttribute("Select")]
+        [NUnit.Framework.TestCaseAttribute("Karsinski", null)]
+        public virtual void ItIsPossibleToSelectFirstNameBetweenAgeFromTheAirportDB(string name, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Select"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("name", name);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("It is possible to select FirstName, between age from the Airport DB", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 41
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 42
+ testRunner.When("I select FirstName between Age 1 and 10 from the Airport DB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "FirstName"});
+                table9.AddRow(new string[] {
+                            string.Format("{0}", name)});
+#line 43
+ testRunner.Then("The table displays the data for the selected name", ((string)(null)), table9, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
