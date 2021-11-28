@@ -5,9 +5,9 @@ using TechTalk.SpecFlow;
 namespace DataBase
 {
     [Binding]
-    public class DataBaseSteps
+    public class DataBaseStepsPersons
     {
-        private SqlConnectorHelper _sqlHelper = (SqlConnectorHelper)ScenarioContext.Current["SqlHelper"];
+        private readonly SqlConnectorHelper _sqlHelper = (SqlConnectorHelper)ScenarioContext.Current["SqlHelper"];
 
         [When(@"I create row in table ""(.*)"" with data")]
         public void WhenICreateRowInTableWithData(string tableName, Table table)
@@ -30,8 +30,8 @@ namespace DataBase
         {
             DataTable responseTable = (DataTable)ScenarioContext.Current["PersonsTable"];
             int numOfRows = responseTable.Rows.Count;
-            string lastAuthors = responseTable.Rows[numOfRows - 1]["FirstName"].ToString();
-            Assert.AreEqual(lastAuthors, table.Rows[0]["FirstName"]);
+            string lastName = responseTable.Rows[numOfRows - 1]["FirstName"].ToString();
+            Assert.AreEqual(lastName, table.Rows[0]["FirstName"]);
         }
     }
 }
