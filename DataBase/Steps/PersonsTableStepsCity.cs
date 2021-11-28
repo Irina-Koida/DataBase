@@ -21,12 +21,12 @@ namespace DataBase.Steps
         {
             string query = "SELECT City FROM Persons";
             DataTable responseTable = _sqlHelper.MakeQuery(query);
-            ScenarioContext.Current["PersonsTable"] = responseTable;
+            _scenarioContext["PersonsTable"] = responseTable;
         }
         [Then(@"Table contains city data")]
         public void ThenTableContainsCityData(Table table)
         {
-            DataTable responseTable = (DataTable)ScenarioContext.Current["PersonsTable"];
+            DataTable responseTable = (DataTable)_scenarioContext["PersonsTable"];
             int numOfRows = responseTable.Rows.Count;
             string lastCity = responseTable.Rows[numOfRows - 1]["City"].ToString();
             Assert.AreEqual(lastCity, table.Rows[0]["City"]);

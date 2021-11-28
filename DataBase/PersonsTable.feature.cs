@@ -113,12 +113,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 8
  testRunner.When("I select to City from \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "City"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             string.Format("{0}", city)});
 #line 9
- testRunner.Then("Table contains city data", ((string)(null)), table6, "Then ");
+ testRunner.Then("Table contains city data", ((string)(null)), table8, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -165,12 +165,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 20
  testRunner.When("I select LastName between ID_Persons 15 and 18 in \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "LastName"});
-                table7.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             string.Format("{0}", lastname)});
 #line 21
- testRunner.Then("the table contains data on the selected delivery ID", ((string)(null)), table7, "Then ");
+ testRunner.Then("the table contains data on the selected delivery ID", ((string)(null)), table9, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -217,12 +217,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 31
  testRunner.When("I select Age between LastName Johnson and Tom in \"Persons\" table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Age"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             string.Format("{0}", age)});
 #line 32
- testRunner.Then("Table contains amount age", ((string)(null)), table8, "Then ");
+ testRunner.Then("Table contains amount age", ((string)(null)), table10, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -267,12 +267,12 @@ this.ScenarioInitialize(scenarioInfo);
 #line 42
  testRunner.When("I select FirstName between Age 1 and 10 from the Airport DB", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "FirstName"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             string.Format("{0}", name)});
 #line 43
- testRunner.Then("The table displays the data for the selected name", ((string)(null)), table9, "Then ");
+ testRunner.Then("The table displays the data for the selected name", ((string)(null)), table11, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

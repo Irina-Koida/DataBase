@@ -21,3 +21,20 @@ Scenario Outline:  It is possible to insert data to Airport DB
 		| Severus | Snape       | 35  | Birmingham |
 		| Albus   | Doumbledore | 78  | Lisburn    |
 
+@InsertData
+Scenario Outline:  It is possible to insert data to DB Airport 
+	When I create row in table "Orders" with some data
+		| Buyer   | Amount   | Delivery   |
+		| <buyer> | <amount> | <delivery> |
+	When I select all "Orders" table
+	Then Table contains some data
+		| Buyer   | Amount   | Delivery   |
+		| <buyer> | <amount> | <delivery> |
+
+	Examples:
+		| buyer   | amount  | delivery   |
+		| Lucius  | 456,00  | Aconite    |
+		| Tom     | 934,98  | Asphodel   |
+		| Lily    | 3218,00 | Badian     |
+		| Severus | 457,89  | Belladonna |
+		| Albus   | 231,00  | Bubontuber |
