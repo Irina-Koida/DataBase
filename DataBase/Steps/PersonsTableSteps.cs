@@ -9,7 +9,7 @@ namespace DataBase.Steps
     {
         private readonly SqlConnectorHelper _sqlHelper = (SqlConnectorHelper)ScenarioContext.Current["SqlHelper"];
 
-        [When(@"I select Sity from ""(.*)"" table")]
+        [When(@"I select to Sity from ""(.*)"" table")]
         public void WhenISelectBuyerFromTable(string tableName)
         {
             string query = "SELECT City FROM Persons";

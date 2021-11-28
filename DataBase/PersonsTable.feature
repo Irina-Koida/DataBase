@@ -5,11 +5,11 @@
 
 @SelectData
 Scenario: It is possible to select data to Airport DB
-	When I select Sity from "Persons" table
+	When I select to Sity from "Persons" table
 	Then Table contains sity data
 		| City   |
 		| <city> |
 
 	Examples:
-		| city       |
+		| city    |
 		| Lisburn |

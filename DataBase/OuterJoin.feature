@@ -5,18 +5,18 @@
 
 
 @OuterJoinData
-Scenario Outline: ability to contain all rows from both tables in DB Airport
-When I create a row in the Persons table with some data
+Scenario Outline: Ability to contain all rows from both tables in DB Airport
+When I select a  Persons table with some data
 
 			When I create row in table "Persons" with data
 		| FirstName | LastName | Age   | 
 		| <name>    | <family> | <age> | 
-	When I create a row in the Orders table with some data
+	When I select a Orders table with some data
 	
 			When I create row in table "Orders" with data
 		| Buyer | Amount | Delivery   |
 		| <buyer>    | <amount> | <delivery> |
-		Then Table contains data
+		Then all the data will be combined into one table
 		| FirstName | LastName | Age   | Buyer | Amount | Delivery   |
 		| <name>    | <family> | <age> |<buyer>    | <amount> | <delivery> |
 		Examples:
