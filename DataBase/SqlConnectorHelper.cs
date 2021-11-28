@@ -9,7 +9,7 @@ namespace DataBase
 
         public void ConnectToDataBase()
         {
-            connection = new SqlConnection("Server = DESKTOP-Q1KV8N7\\SQLEXPRESS; Database = Airport; Integrated Security = true");
+            connection = new SqlConnection("Server = DESKTOP-M25GUR8\\SQLEXPRESS; Database = Airport; Integrated Security = true");
             this.connection.Open();
         }
 
